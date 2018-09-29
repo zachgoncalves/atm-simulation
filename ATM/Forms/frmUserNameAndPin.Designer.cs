@@ -32,10 +32,10 @@
             this.lblVerifyDesc = new System.Windows.Forms.Label();
             this.lblVerifyName = new System.Windows.Forms.Label();
             this.lblVerifyPin = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtVerifyPin = new System.Windows.Forms.TextBox();
             this.txtVerifyName = new System.Windows.Forms.TextBox();
             this.btnVerifyAcc = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,15 +79,6 @@
             this.lblVerifyPin.TabIndex = 5;
             this.lblVerifyPin.Text = "Pin Number (4 Digits):";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ATM.Properties.Resources.logo_small;
-            this.pictureBox1.Location = new System.Drawing.Point(34, 28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(303, 64);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtVerifyPin
             // 
             this.txtVerifyPin.Location = new System.Drawing.Point(339, 249);
@@ -112,6 +103,15 @@
             this.btnVerifyAcc.TabIndex = 8;
             this.btnVerifyAcc.Text = "Okay";
             this.btnVerifyAcc.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ATM.Properties.Resources.logo_small;
+            this.pictureBox1.Location = new System.Drawing.Point(31, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(303, 64);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frmUserNameAndPin
             // 
