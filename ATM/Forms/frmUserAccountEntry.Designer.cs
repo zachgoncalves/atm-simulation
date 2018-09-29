@@ -47,7 +47,7 @@
             // 
             // txtAccNum
             // 
-            this.txtAccNum.Location = new System.Drawing.Point(187, 227);
+            this.txtAccNum.Location = new System.Drawing.Point(203, 227);
             this.txtAccNum.Name = "txtAccNum";
             this.txtAccNum.Size = new System.Drawing.Size(111, 20);
             this.txtAccNum.TabIndex = 2;
@@ -56,7 +56,7 @@
             // 
             this.btnAccStart.BackColor = System.Drawing.Color.Green;
             this.btnAccStart.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnAccStart.Location = new System.Drawing.Point(322, 222);
+            this.btnAccStart.Location = new System.Drawing.Point(338, 222);
             this.btnAccStart.Name = "btnAccStart";
             this.btnAccStart.Size = new System.Drawing.Size(88, 28);
             this.btnAccStart.TabIndex = 3;
