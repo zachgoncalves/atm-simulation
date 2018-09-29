@@ -121,7 +121,7 @@
             this.btnCheckingToSavings.Name = "btnCheckingToSavings";
             this.btnCheckingToSavings.Size = new System.Drawing.Size(237, 30);
             this.btnCheckingToSavings.TabIndex = 14;
-            this.btnCheckingToSavings.Text = "Transfer to Checking";
+            this.btnCheckingToSavings.Text = "Transfer to Savings";
             this.btnCheckingToSavings.UseVisualStyleBackColor = true;
             // 
             // btnCheckingBalance
