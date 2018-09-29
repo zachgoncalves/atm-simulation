@@ -16,7 +16,7 @@ namespace ATM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmATMStart());
+            Application.Run(new Forms.frmUserAccountEntry());
         }
     }
 }

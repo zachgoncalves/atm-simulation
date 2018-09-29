@@ -176,6 +176,7 @@
             // 
             this.txtTransactionInput.Location = new System.Drawing.Point(419, 460);
             this.txtTransactionInput.Name = "txtTransactionInput";
+            this.txtTransactionInput.ReadOnly = true;
             this.txtTransactionInput.Size = new System.Drawing.Size(130, 20);
             this.txtTransactionInput.TabIndex = 16;
             // 
@@ -255,7 +256,7 @@
             this.MaximizeBox = false;
             this.Name = "frmTransactionEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTransactionEntry";
+            this.Text = "MazeBank - Select Transaction";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

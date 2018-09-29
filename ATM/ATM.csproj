@@ -50,12 +50,6 @@
     <Compile Include="Classes\currentFile.cs" />
     <Compile Include="Classes\Customer.cs" />
     <Compile Include="Classes\updatedFile.cs" />
-    <Compile Include="frmATMStart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmATMStart.Designer.cs">
-      <DependentUpon>frmATMStart.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmTransactionComplete.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,10 +74,25 @@
     <Compile Include="Forms\frmUserNameAndPin.Designer.cs">
       <DependentUpon>frmUserNameAndPin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmATMStart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmATMStart.Designer.cs">
+      <DependentUpon>frmATMStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmTransactionComplete.resx">
+      <DependentUpon>frmTransactionComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransactionEntry.resx">
+      <DependentUpon>frmTransactionEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUserAccountEntry.resx">
       <DependentUpon>frmUserAccountEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserNameAndPin.resx">
+      <DependentUpon>frmUserNameAndPin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

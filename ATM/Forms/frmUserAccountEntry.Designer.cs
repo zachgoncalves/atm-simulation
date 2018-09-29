@@ -85,7 +85,7 @@
             this.MaximizeBox = false;
             this.Name = "frmUserAccountEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmUserAccountEntry";
+            this.Text = "MazeBank - Enter Account Number";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

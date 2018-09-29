@@ -130,7 +130,7 @@
             this.MaximizeBox = false;
             this.Name = "frmUserNameAndPin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmUserNameAndPin";
+            this.Text = "MazeBank - Verify it\'s you";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
