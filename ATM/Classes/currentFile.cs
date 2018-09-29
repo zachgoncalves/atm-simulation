@@ -2,11 +2,6 @@
  * Component Based Software Design (CIS 3309) 
  * Project 2: ATM
  * Written by: Zachary Goncalves with code provided by Professor Frank Friedman
- * 
- * Description:
- * This project is a simulation of the Game of Nim, in which players must not be the last player to take the last button
- * This simulation keeps track of two players, the number of games played between these players, and the number of games
- * each player has won.
  */
 using System;
 using System.Collections.Generic;
