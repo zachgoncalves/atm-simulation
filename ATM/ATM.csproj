@@ -46,14 +46,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Classes\ATMBank.cs" />
+    <Compile Include="Classes\currentFile.cs" />
+    <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\updatedFile.cs" />
+    <Compile Include="frmATMStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmATMStart.Designer.cs">
+      <DependentUpon>frmATMStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransactionComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransactionComplete.Designer.cs">
+      <DependentUpon>frmTransactionComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransactionEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransactionEntry.Designer.cs">
+      <DependentUpon>frmTransactionEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserAccountEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserAccountEntry.Designer.cs">
+      <DependentUpon>frmUserAccountEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserNameAndPin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserNameAndPin.Designer.cs">
+      <DependentUpon>frmUserNameAndPin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmUserAccountEntry.resx">
+      <DependentUpon>frmUserAccountEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +93,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +107,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\logo-small.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

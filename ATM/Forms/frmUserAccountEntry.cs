@@ -16,5 +16,6 @@ namespace ATM.Forms
         {
             InitializeComponent();
         }
+
     }
 }
