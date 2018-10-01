@@ -40,8 +40,7 @@ namespace ATM.Classes
 
 
         // Read a record from the current file
-        public string getNextRecord(
-            ref Boolean endOfFileFlag)
+        public string getNextRecord(ref Boolean endOfFileFlag)
         {
             string nextRecord;
 

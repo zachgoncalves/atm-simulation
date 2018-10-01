@@ -49,6 +49,7 @@
     <Compile Include="Classes\ATMBank.cs" />
     <Compile Include="Classes\currentFile.cs" />
     <Compile Include="Classes\Customer.cs" />
+    <Compile Include="Classes\GlobalData.cs" />
     <Compile Include="Classes\updatedFile.cs" />
     <Compile Include="Forms\frmTransactionComplete.cs">
       <SubType>Form</SubType>
