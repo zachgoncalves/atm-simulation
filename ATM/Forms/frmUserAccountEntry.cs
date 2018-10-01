@@ -33,9 +33,15 @@ namespace ATM.Forms
                 } else
                 {
                     string strAccNumber = accNumber.ToString();
-                    GlobalData.customer.customerMatch(strAccNumber, accountsInFile);
+                    bool custExists = GlobalData.customer.customerMatch(strAccNumber, accountsInFile);
+                    if(custExists)
+                    {
+                        Form UserNamePinForm = new Forms.frmUserNameAndPin();
+                        UserNamePinForm.Show();
+                    }
                 }
-            } catch
+            }
+            catch
             {
                 txtAccNum.Text = " ";
                 MessageBox.Show("Please enter a valid account number of 5 digits.", "Error");
