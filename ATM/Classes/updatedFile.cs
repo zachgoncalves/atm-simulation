@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ATM.Classes
@@ -16,7 +17,7 @@ namespace ATM.Classes
         // updatedFile class that handles writes data from currentFile and update data from customer to a new file.
         // Author: Professor Frank Friedman, with modifications by Zachary Goncalves
         private string updatedFilePath;
-        private System.IO.StreamReader currentFileSR;   // Reference variable of type SR
+        private StreamReader currentFileSR;   // Reference variable of type SR
         private int recordReadCount;
 
 
@@ -42,6 +43,22 @@ namespace ATM.Classes
             } // end Try
         } // end currentFileClass 
 
+        public void putNextRecord(string record)
+        {
+            try
+            {
+                string[] lines = { "no", "yes", "maybe"};
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(updatedFilePath, "updatedFile.txt")))
+                {
+                    foreach (string line in lines)
+                        outputFile.WriteLine(line);
+                }
+            }
+            catch
+            {
+
+            }
+        }
 
         // Read a record from the current file
         public string getNextRecord(ref Boolean endOfFileFlag)

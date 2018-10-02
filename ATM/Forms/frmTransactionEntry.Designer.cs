@@ -53,9 +53,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ATM.Properties.Resources.logo_small;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(303, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(454, 98);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -63,9 +64,10 @@
             // 
             this.lblSavingsTitle.AutoSize = true;
             this.lblSavingsTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSavingsTitle.Location = new System.Drawing.Point(109, 155);
+            this.lblSavingsTitle.Location = new System.Drawing.Point(164, 238);
+            this.lblSavingsTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSavingsTitle.Name = "lblSavingsTitle";
-            this.lblSavingsTitle.Size = new System.Drawing.Size(89, 20);
+            this.lblSavingsTitle.Size = new System.Drawing.Size(124, 29);
             this.lblSavingsTitle.TabIndex = 5;
             this.lblSavingsTitle.Text = "SAVINGS";
             // 
@@ -73,80 +75,89 @@
             // 
             this.lblTransactionTitle.AutoSize = true;
             this.lblTransactionTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransactionTitle.Location = new System.Drawing.Point(265, 109);
+            this.lblTransactionTitle.Location = new System.Drawing.Point(398, 168);
+            this.lblTransactionTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTransactionTitle.Name = "lblTransactionTitle";
-            this.lblTransactionTitle.Size = new System.Drawing.Size(241, 24);
+            this.lblTransactionTitle.Size = new System.Drawing.Size(350, 32);
             this.lblTransactionTitle.TabIndex = 4;
             this.lblTransactionTitle.Text = "SELECT TRANSACTION";
             // 
             // btnSavingsDeposit
             // 
-            this.btnSavingsDeposit.Location = new System.Drawing.Point(113, 190);
+            this.btnSavingsDeposit.Location = new System.Drawing.Point(170, 292);
+            this.btnSavingsDeposit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSavingsDeposit.Name = "btnSavingsDeposit";
-            this.btnSavingsDeposit.Size = new System.Drawing.Size(237, 30);
+            this.btnSavingsDeposit.Size = new System.Drawing.Size(356, 46);
             this.btnSavingsDeposit.TabIndex = 6;
             this.btnSavingsDeposit.Text = "Deposit";
             this.btnSavingsDeposit.UseVisualStyleBackColor = true;
             // 
             // btnSavingsWithdraw
             // 
-            this.btnSavingsWithdraw.Location = new System.Drawing.Point(113, 236);
+            this.btnSavingsWithdraw.Location = new System.Drawing.Point(170, 363);
+            this.btnSavingsWithdraw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSavingsWithdraw.Name = "btnSavingsWithdraw";
-            this.btnSavingsWithdraw.Size = new System.Drawing.Size(237, 30);
+            this.btnSavingsWithdraw.Size = new System.Drawing.Size(356, 46);
             this.btnSavingsWithdraw.TabIndex = 7;
             this.btnSavingsWithdraw.Text = "Withdraw";
             this.btnSavingsWithdraw.UseVisualStyleBackColor = true;
             // 
             // btnSavingsBalance
             // 
-            this.btnSavingsBalance.Location = new System.Drawing.Point(113, 282);
+            this.btnSavingsBalance.Location = new System.Drawing.Point(170, 434);
+            this.btnSavingsBalance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSavingsBalance.Name = "btnSavingsBalance";
-            this.btnSavingsBalance.Size = new System.Drawing.Size(237, 30);
+            this.btnSavingsBalance.Size = new System.Drawing.Size(356, 46);
             this.btnSavingsBalance.TabIndex = 8;
             this.btnSavingsBalance.Text = "View Balance";
             this.btnSavingsBalance.UseVisualStyleBackColor = true;
             // 
             // btnSavingsToChecking
             // 
-            this.btnSavingsToChecking.Location = new System.Drawing.Point(113, 327);
+            this.btnSavingsToChecking.Location = new System.Drawing.Point(170, 503);
+            this.btnSavingsToChecking.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSavingsToChecking.Name = "btnSavingsToChecking";
-            this.btnSavingsToChecking.Size = new System.Drawing.Size(237, 30);
+            this.btnSavingsToChecking.Size = new System.Drawing.Size(356, 46);
             this.btnSavingsToChecking.TabIndex = 9;
             this.btnSavingsToChecking.Text = "Transfer to Checking";
             this.btnSavingsToChecking.UseVisualStyleBackColor = true;
             // 
             // btnCheckingToSavings
             // 
-            this.btnCheckingToSavings.Location = new System.Drawing.Point(439, 327);
+            this.btnCheckingToSavings.Location = new System.Drawing.Point(658, 503);
+            this.btnCheckingToSavings.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCheckingToSavings.Name = "btnCheckingToSavings";
-            this.btnCheckingToSavings.Size = new System.Drawing.Size(237, 30);
+            this.btnCheckingToSavings.Size = new System.Drawing.Size(356, 46);
             this.btnCheckingToSavings.TabIndex = 14;
             this.btnCheckingToSavings.Text = "Transfer to Savings";
             this.btnCheckingToSavings.UseVisualStyleBackColor = true;
             // 
             // btnCheckingBalance
             // 
-            this.btnCheckingBalance.Location = new System.Drawing.Point(439, 282);
+            this.btnCheckingBalance.Location = new System.Drawing.Point(658, 434);
+            this.btnCheckingBalance.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCheckingBalance.Name = "btnCheckingBalance";
-            this.btnCheckingBalance.Size = new System.Drawing.Size(237, 30);
+            this.btnCheckingBalance.Size = new System.Drawing.Size(356, 46);
             this.btnCheckingBalance.TabIndex = 13;
             this.btnCheckingBalance.Text = "View Balance";
             this.btnCheckingBalance.UseVisualStyleBackColor = true;
             // 
             // btnCheckingWithdraw
             // 
-            this.btnCheckingWithdraw.Location = new System.Drawing.Point(439, 236);
+            this.btnCheckingWithdraw.Location = new System.Drawing.Point(658, 363);
+            this.btnCheckingWithdraw.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCheckingWithdraw.Name = "btnCheckingWithdraw";
-            this.btnCheckingWithdraw.Size = new System.Drawing.Size(237, 30);
+            this.btnCheckingWithdraw.Size = new System.Drawing.Size(356, 46);
             this.btnCheckingWithdraw.TabIndex = 12;
             this.btnCheckingWithdraw.Text = "Withdraw";
             this.btnCheckingWithdraw.UseVisualStyleBackColor = true;
             // 
             // btnCheckingDeposit
             // 
-            this.btnCheckingDeposit.Location = new System.Drawing.Point(439, 190);
+            this.btnCheckingDeposit.Location = new System.Drawing.Point(658, 292);
+            this.btnCheckingDeposit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCheckingDeposit.Name = "btnCheckingDeposit";
-            this.btnCheckingDeposit.Size = new System.Drawing.Size(237, 30);
+            this.btnCheckingDeposit.Size = new System.Drawing.Size(356, 46);
             this.btnCheckingDeposit.TabIndex = 11;
             this.btnCheckingDeposit.Text = "Deposit";
             this.btnCheckingDeposit.UseVisualStyleBackColor = true;
@@ -155,9 +166,10 @@
             // 
             this.lblCheckingTitle.AutoSize = true;
             this.lblCheckingTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckingTitle.Location = new System.Drawing.Point(435, 155);
+            this.lblCheckingTitle.Location = new System.Drawing.Point(652, 238);
+            this.lblCheckingTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCheckingTitle.Name = "lblCheckingTitle";
-            this.lblCheckingTitle.Size = new System.Drawing.Size(101, 20);
+            this.lblCheckingTitle.Size = new System.Drawing.Size(146, 29);
             this.lblCheckingTitle.TabIndex = 10;
             this.lblCheckingTitle.Text = "CHECKING";
             // 
@@ -165,28 +177,31 @@
             // 
             this.lblVerifyTransactionInput.AutoSize = true;
             this.lblVerifyTransactionInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVerifyTransactionInput.Location = new System.Drawing.Point(114, 460);
+            this.lblVerifyTransactionInput.Location = new System.Drawing.Point(171, 708);
+            this.lblVerifyTransactionInput.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVerifyTransactionInput.Name = "lblVerifyTransactionInput";
-            this.lblVerifyTransactionInput.Size = new System.Drawing.Size(556, 20);
+            this.lblVerifyTransactionInput.Size = new System.Drawing.Size(829, 29);
             this.lblVerifyTransactionInput.TabIndex = 15;
             this.lblVerifyTransactionInput.Text = "You selected the marked transaction and                                    . Is t" +
     "his correct?";
             // 
             // txtTransactionInput
             // 
-            this.txtTransactionInput.Location = new System.Drawing.Point(419, 460);
+            this.txtTransactionInput.Location = new System.Drawing.Point(628, 708);
+            this.txtTransactionInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTransactionInput.Name = "txtTransactionInput";
             this.txtTransactionInput.ReadOnly = true;
-            this.txtTransactionInput.Size = new System.Drawing.Size(130, 20);
+            this.txtTransactionInput.Size = new System.Drawing.Size(193, 26);
             this.txtTransactionInput.TabIndex = 16;
             // 
             // btnTransactionGo
             // 
             this.btnTransactionGo.BackColor = System.Drawing.Color.Green;
             this.btnTransactionGo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTransactionGo.Location = new System.Drawing.Point(248, 510);
+            this.btnTransactionGo.Location = new System.Drawing.Point(372, 785);
+            this.btnTransactionGo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTransactionGo.Name = "btnTransactionGo";
-            this.btnTransactionGo.Size = new System.Drawing.Size(134, 38);
+            this.btnTransactionGo.Size = new System.Drawing.Size(201, 58);
             this.btnTransactionGo.TabIndex = 17;
             this.btnTransactionGo.Text = "Yes - Process Request";
             this.btnTransactionGo.UseVisualStyleBackColor = false;
@@ -195,9 +210,10 @@
             // 
             this.btnTransactionNo.BackColor = System.Drawing.Color.DarkRed;
             this.btnTransactionNo.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnTransactionNo.Location = new System.Drawing.Point(414, 510);
+            this.btnTransactionNo.Location = new System.Drawing.Point(621, 785);
+            this.btnTransactionNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTransactionNo.Name = "btnTransactionNo";
-            this.btnTransactionNo.Size = new System.Drawing.Size(134, 38);
+            this.btnTransactionNo.Size = new System.Drawing.Size(201, 58);
             this.btnTransactionNo.TabIndex = 18;
             this.btnTransactionNo.Text = "No - Select Again";
             this.btnTransactionNo.UseVisualStyleBackColor = false;
@@ -206,33 +222,36 @@
             // 
             this.lblTransactionAmount.AutoSize = true;
             this.lblTransactionAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransactionAmount.Location = new System.Drawing.Point(114, 412);
+            this.lblTransactionAmount.Location = new System.Drawing.Point(171, 634);
+            this.lblTransactionAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTransactionAmount.Name = "lblTransactionAmount";
-            this.lblTransactionAmount.Size = new System.Drawing.Size(204, 20);
+            this.lblTransactionAmount.Size = new System.Drawing.Size(308, 29);
             this.lblTransactionAmount.TabIndex = 19;
             this.lblTransactionAmount.Text = "Select an amount in dollars:";
             // 
             // txtTransactionAmount
             // 
-            this.txtTransactionAmount.Location = new System.Drawing.Point(325, 412);
+            this.txtTransactionAmount.Location = new System.Drawing.Point(488, 634);
+            this.txtTransactionAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTransactionAmount.Name = "txtTransactionAmount";
-            this.txtTransactionAmount.Size = new System.Drawing.Size(130, 20);
+            this.txtTransactionAmount.Size = new System.Drawing.Size(193, 26);
             this.txtTransactionAmount.TabIndex = 20;
             // 
             // btnTransactionAmountOK
             // 
-            this.btnTransactionAmountOK.Location = new System.Drawing.Point(473, 410);
+            this.btnTransactionAmountOK.Location = new System.Drawing.Point(710, 631);
+            this.btnTransactionAmountOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTransactionAmountOK.Name = "btnTransactionAmountOK";
-            this.btnTransactionAmountOK.Size = new System.Drawing.Size(75, 23);
+            this.btnTransactionAmountOK.Size = new System.Drawing.Size(112, 35);
             this.btnTransactionAmountOK.TabIndex = 21;
             this.btnTransactionAmountOK.Text = "OK";
             this.btnTransactionAmountOK.UseVisualStyleBackColor = true;
             // 
             // frmTransactionEntry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 575);
+            this.ClientSize = new System.Drawing.Size(1200, 885);
             this.Controls.Add(this.btnTransactionAmountOK);
             this.Controls.Add(this.txtTransactionAmount);
             this.Controls.Add(this.lblTransactionAmount);
@@ -253,6 +272,7 @@
             this.Controls.Add(this.lblTransactionTitle);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmTransactionEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

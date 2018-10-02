@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ATM.Classes
 {
-    class Customer
+    public class Customer
     {
         string customer;
         string customerAccNumber;
@@ -19,9 +19,9 @@ namespace ATM.Classes
         public Boolean customerMatch(string accNumber, string accountsInFile)
         {
             bool endOfFile = false;
-            while(endOfFile)
+            while (endOfFile)
             {
-                string[] recordArray = new string[currentFile.getNextRecord(ref bool endOfFile).Split()];
+                string[] recordArray = GlobalData.currentFile.getNextRecord(ref endOfFile).Split('*');
                 accountsInFile = recordArray[0];
                 if(accountsInFile.Equals(accNumber))
                 {
@@ -33,6 +33,14 @@ namespace ATM.Classes
                 }
             }
             return true;
+        }
+        public string setRecordName(string customerName)
+        {
+            return recordName = customerName;
+        }
+        public string setRecordPin(string customerPin)
+        {
+            return recordPin = customerPin;
         }
     }
 }

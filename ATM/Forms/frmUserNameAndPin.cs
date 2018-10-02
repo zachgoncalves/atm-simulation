@@ -16,5 +16,14 @@ namespace ATM.Forms
         {
             InitializeComponent();
         }
+
+        private void btnVerifyAcc_Click(object sender, EventArgs e)
+        {
+            // TODO: 
+            //  - Verify Pin and Name with inputted account number
+            //  - Count number of failed entries (and kick user out / reload to form 1)
+            // txtVerifyName, txtVerifyPin
+            //  - Output error message for user (was it name or pin)
+        }
     }
 }
