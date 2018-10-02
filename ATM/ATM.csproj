@@ -75,12 +75,6 @@
     <Compile Include="Forms\frmUserNameAndPin.Designer.cs">
       <DependentUpon>frmUserNameAndPin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmATMStart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmATMStart.Designer.cs">
-      <DependentUpon>frmATMStart.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmTransactionComplete.resx">

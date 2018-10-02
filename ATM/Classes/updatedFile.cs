@@ -4,9 +4,6 @@
  * Written by: Zachary Goncalves with code provided by Professor Frank Friedman
  */
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.IO;
 using System.Windows.Forms;
 
@@ -18,7 +15,7 @@ namespace ATM.Classes
         // Author: Professor Frank Friedman, with modifications by Zachary Goncalves
         private string updatedFilePath;
         private StreamReader currentFileSR;   // Reference variable of type SR
-        private int recordReadCount;
+        private int recordsWrittenCount;
 
 
         /* TO DO:
@@ -31,7 +28,7 @@ namespace ATM.Classes
         // Create instance of StreamReader class (type) and store reference
         public updatedFile(string filePath)
         {
-            recordReadCount = 0;
+            recordsWrittenCount = 0;
             updatedFilePath = filePath;
             try
             {
@@ -74,7 +71,7 @@ namespace ATM.Classes
             }
             else
             {
-                recordReadCount += 1;
+                recordsWrittenCount += 1;
             } // end if
 
             return (nextRecord);
@@ -82,9 +79,9 @@ namespace ATM.Classes
 
 
         // Get value of number of records read
-        public int getRecordsReadCount()
+        public int getRecordsWrittenCount()
         {
-            return recordReadCount;
+            return recordsWrittenCount;
         } // end getecordsReadCount
 
 
@@ -98,7 +95,7 @@ namespace ATM.Classes
         // Rewind the input file
         public void rewindFile()
         {
-            recordReadCount = 0;
+            recordsWrittenCount = 0;
             currentFileSR.BaseStream.Seek(0, System.IO.SeekOrigin.Begin);
         } // end rewindFile
     } // end currentFileClass
