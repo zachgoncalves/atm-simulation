@@ -21,8 +21,7 @@ namespace ATM.Classes
 
         // Constructor with file path input
         // Create instance of StreamReader class (type) and store reference
-        public currentFile
-            (string filePath)
+        public currentFile(string filePath)
         {
             recordReadCount = 0;
             currentFilePath = filePath;
@@ -32,7 +31,7 @@ namespace ATM.Classes
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Cannot open file" + currentFilePath + "Terminate Program.",
+                MessageBox.Show("Cannot open file" + currentFilePath + "Terminate Program." + ex.Message,
                             "Output File Connection Error.",
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
             } // end Try

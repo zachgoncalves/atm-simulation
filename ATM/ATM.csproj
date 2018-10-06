@@ -118,5 +118,8 @@
   <ItemGroup>
     <None Include="Images\logo-small.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="CurrentATMBankFile.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

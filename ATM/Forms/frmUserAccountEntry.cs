@@ -23,28 +23,38 @@ namespace ATM.Forms
             try
             {
                 int accNumber = Convert.ToInt32(txtAccNum.Text);
-                string accountsInFile = "";
-                if (accNumber.ToString().Length > 5)
+                if (accNumber.ToString().Length != 5)
                 {
                     accNumber = 0;
-                    txtAccNum.Text = " ";
+                    txtAccNum.Text = "";
                     MessageBox.Show("Please enter an account number of 5 digits.", "Error");
                     txtAccNum.Focus();
-                } else
+                }
+                else
                 {
                     string strAccNumber = accNumber.ToString();
-                    bool custExists = GlobalData.customer.customerMatch(strAccNumber, accountsInFile);
-                    if(custExists)
+                    bool foundRecord = false;
+                    string record = GlobalData.ATMBank.findCustomerRecord(strAccNumber, ref foundRecord);
+
+                    if (foundRecord)
                     {
-                        Form UserNamePinForm = new Forms.frmUserNameAndPin();
+                        Form UserNamePinForm = new frmUserNameAndPin();
                         UserNamePinForm.Show();
+                    }
+                    else
+                    {
+                        record = "";
+                        strAccNumber = "";
+                        MessageBox.Show("Please enter an account number that exists in our system.", "Error");
+                        txtAccNum.Text = "";
+                        txtAccNum.Focus();
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                txtAccNum.Text = " ";
-                MessageBox.Show("Please enter a valid account number of 5 digits.", "Error");
+                txtAccNum.Text = "";
+                MessageBox.Show("Please enter a valid account number of 5 digits." + ex, "Error");
                 txtAccNum.Focus();
             }
         }

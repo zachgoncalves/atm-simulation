@@ -12,35 +12,38 @@ namespace ATM.Classes
         string customer;
         string customerAccNumber;
         string recordName;
-        string recordPin;
+        int recordPin;
         decimal recordCheckingBalance;
         decimal recordSavingBalance;
 
-        public Boolean customerMatch(string accNumber, string accountsInFile)
+        public Boolean customerMatch(string accNumber, string record)
         {
-            bool endOfFile = false;
-            while (endOfFile)
+            record = record.Replace(",", "");
+            record = record.Replace("$", "");
+            string[] recordBreakdown = record.Split('*');
+
+            if (recordBreakdown[0].Trim().Equals(accNumber))
             {
-                string[] recordArray = GlobalData.currentFile.getNextRecord(ref endOfFile).Split('*');
-                accountsInFile = recordArray[0];
-                if(accountsInFile.Equals(accNumber))
-                {
-                    customerAccNumber = accNumber;
-                    break;
-                } else if (endOfFile == true)
-                {
-                    return false;
-                }
+                customerAccNumber = accNumber;
+                recordName = recordBreakdown[1].Trim();
+                recordPin = Convert.ToInt32(recordBreakdown[2]);
+                recordSavingBalance = Convert.ToDecimal(recordBreakdown[3]);
+                recordCheckingBalance = Convert.ToDecimal(recordBreakdown[4]);
+                MessageBox.Show(recordBreakdown[0] + " :Acc Num: " + accNumber);
+                return true;
             }
-            return true;
+            else
+            {
+                return false;
+            }   
         }
-        public string setRecordName(string customerName)
+        public string getCustomerName()
         {
-            return recordName = customerName;
+            return recordName;
         }
-        public string setRecordPin(string customerPin)
+        public int getCustomerPin()
         {
-            return recordPin = customerPin;
+            return recordPin;
         }
     }
 }
