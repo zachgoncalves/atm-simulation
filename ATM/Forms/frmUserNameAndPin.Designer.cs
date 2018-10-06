@@ -89,7 +89,7 @@
             this.txtVerifyPin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtVerifyPin.Name = "txtVerifyPin";
             this.txtVerifyPin.Size = new System.Drawing.Size(148, 26);
-            this.txtVerifyPin.TabIndex = 6;
+            this.txtVerifyPin.TabIndex = 7;
             // 
             // txtVerifyName
             // 
@@ -97,7 +97,7 @@
             this.txtVerifyName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtVerifyName.Name = "txtVerifyName";
             this.txtVerifyName.Size = new System.Drawing.Size(148, 26);
-            this.txtVerifyName.TabIndex = 7;
+            this.txtVerifyName.TabIndex = 6;
             // 
             // btnVerifyAcc
             // 
