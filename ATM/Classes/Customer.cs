@@ -45,5 +45,18 @@ namespace ATM.Classes
         {
             return recordPin;
         }
+        public decimal getRecordSavingsBalance()
+        {
+            return recordSavingBalance;
+        }
+        public decimal getRecordCheckingBalance()
+        {
+            return recordCheckingBalance;
+        }
+        public void updateSavingsCheckings(decimal savingsBalance, decimal checkingBalance)
+        {
+            recordCheckingBalance = checkingBalance;
+            recordSavingBalance = savingsBalance;
+        }
     }
 }
