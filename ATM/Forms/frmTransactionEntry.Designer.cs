@@ -47,6 +47,7 @@
             this.lblTransactionAmount = new System.Windows.Forms.Label();
             this.txtTransactionAmount = new System.Windows.Forms.TextBox();
             this.btnTransactionAmountOK = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -184,6 +185,7 @@
             this.lblVerifyTransactionInput.TabIndex = 15;
             this.lblVerifyTransactionInput.Text = "You selected the marked transaction and                                    . Is t" +
     "his correct?";
+            this.lblVerifyTransactionInput.Visible = false;
             // 
             // txtTransactionInput
             // 
@@ -193,10 +195,12 @@
             this.txtTransactionInput.ReadOnly = true;
             this.txtTransactionInput.Size = new System.Drawing.Size(193, 26);
             this.txtTransactionInput.TabIndex = 16;
+            this.txtTransactionInput.Visible = false;
             // 
             // btnTransactionGo
             // 
             this.btnTransactionGo.BackColor = System.Drawing.Color.Green;
+            this.btnTransactionGo.Enabled = false;
             this.btnTransactionGo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnTransactionGo.Location = new System.Drawing.Point(372, 785);
             this.btnTransactionGo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -209,6 +213,7 @@
             // btnTransactionNo
             // 
             this.btnTransactionNo.BackColor = System.Drawing.Color.DarkRed;
+            this.btnTransactionNo.Enabled = false;
             this.btnTransactionNo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnTransactionNo.Location = new System.Drawing.Point(621, 785);
             this.btnTransactionNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -231,6 +236,7 @@
             // 
             // txtTransactionAmount
             // 
+            this.txtTransactionAmount.Enabled = false;
             this.txtTransactionAmount.Location = new System.Drawing.Point(488, 634);
             this.txtTransactionAmount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTransactionAmount.Name = "txtTransactionAmount";
@@ -239,6 +245,7 @@
             // 
             // btnTransactionAmountOK
             // 
+            this.btnTransactionAmountOK.Enabled = false;
             this.btnTransactionAmountOK.Location = new System.Drawing.Point(710, 631);
             this.btnTransactionAmountOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTransactionAmountOK.Name = "btnTransactionAmountOK";
@@ -246,6 +253,13 @@
             this.btnTransactionAmountOK.TabIndex = 21;
             this.btnTransactionAmountOK.Text = "OK";
             this.btnTransactionAmountOK.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(105, 270);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(984, 316);
+            this.panel1.TabIndex = 22;
             // 
             // frmTransactionEntry
             // 
@@ -271,6 +285,7 @@
             this.Controls.Add(this.lblSavingsTitle);
             this.Controls.Add(this.lblTransactionTitle);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
@@ -304,5 +319,6 @@
         private System.Windows.Forms.Label lblTransactionAmount;
         private System.Windows.Forms.TextBox txtTransactionAmount;
         private System.Windows.Forms.Button btnTransactionAmountOK;
+        private System.Windows.Forms.Panel panel1;
     }
 }
