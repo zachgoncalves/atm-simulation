@@ -28,6 +28,13 @@ namespace ATM.Forms
         private void btnNoNewTransaction_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thanks for being a MazeBank Customer!");
+            Application.Exit();
+        }
+
+        private void btnNewTransaction_Click(object sender, EventArgs e)
+        {
+            Form frmTransactionEntry = new frmTransactionEntry();
+            frmTransactionEntry.Show();
             Close();
         }
     }

@@ -32,6 +32,7 @@ namespace ATM.Forms
                 {
                     Form frmTransactionEntry = new frmTransactionEntry();
                     frmTransactionEntry.Show();
+                    Close();
                 }
                 else
                 {

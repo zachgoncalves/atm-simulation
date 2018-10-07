@@ -80,10 +80,20 @@ namespace ATM.Forms
             try
             {
                 transactionAmount = Convert.ToDecimal(txtTransactionAmount.Text);
-                pnlVerifyAmount.Visible = true;
-                txtTransactionInput.Text = transactionAmount.ToString();
-                btnTransactionGo.Enabled = true;
-                btnTransactionNo.Enabled = true;
+                if(transactionAmount < 0)
+                {
+                    MessageBox.Show("Please enter a non-negative amount.", "Error");
+                    txtTransactionAmount.Text = "";
+                    txtTransactionAmount.Focus();
+                }
+                else
+                {
+                    pnlVerifyAmount.Visible = true;
+                    txtTransactionInput.Text = transactionAmount.ToString();
+                    btnTransactionGo.Enabled = true;
+                    btnTransactionNo.Enabled = true;
+                }
+                
             }
             catch
             {
@@ -95,9 +105,11 @@ namespace ATM.Forms
 
         private void btnTransactionGo_Click(object sender, EventArgs e)
         {
+            bool transactionHappened = false; 
             if (selectedTransaction == 1)
             {
                 savingsBalance += transactionAmount;
+                transactionHappened = true;
             }
             if (selectedTransaction == 2)
             {
@@ -120,6 +132,7 @@ namespace ATM.Forms
                     else
                     {
                         savingsBalance -= transactionAmount;
+                        transactionHappened = true;
                     }
                 }
             }
@@ -136,11 +149,13 @@ namespace ATM.Forms
                 {
                     savingsBalance -= transactionAmount;
                     checkingBalance += transactionAmount;
+                    transactionHappened = true;
                 }
             }
             if (selectedTransaction == 5)
             {
                 checkingBalance += transactionAmount;
+                transactionHappened = true;
             }
             if (selectedTransaction == 6)
             {
@@ -163,6 +178,7 @@ namespace ATM.Forms
                     else
                     {
                         checkingBalance += transactionAmount;
+                        transactionHappened = true;
                     }
                 }
             }
@@ -179,9 +195,17 @@ namespace ATM.Forms
                 {
                     checkingBalance -= transactionAmount;
                     savingsBalance += transactionAmount;
+                    transactionHappened = true;
                 }
             }
-            GlobalData.customer.updateSavingsCheckings(savingsBalance, checkingBalance);
+            if (transactionHappened)
+            {
+                GlobalData.customer.updateSavingsCheckings(savingsBalance, checkingBalance);
+                Form frmTransactionComplete = new frmTransactionComplete();
+                frmTransactionComplete.Show();
+                Close();
+            }
+
         }
 
         private void btnTransactionNo_Click(object sender, EventArgs e)

@@ -101,6 +101,7 @@
             this.btnNewTransaction.TabIndex = 19;
             this.btnNewTransaction.Text = "Yes";
             this.btnNewTransaction.UseVisualStyleBackColor = false;
+            this.btnNewTransaction.Click += new System.EventHandler(this.btnNewTransaction_Click);
             // 
             // txtSavingsBalance
             // 
