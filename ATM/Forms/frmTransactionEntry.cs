@@ -71,8 +71,17 @@ namespace ATM.Forms
             {
                 selectedTransaction = 8;
             }
-            pnlValueInput.Enabled = true;
-            txtTransactionAmount.Focus();
+            if (selectedTransaction == 3 || selectedTransaction == 7)
+            {
+                btnTransactionGo.Enabled = true;
+                btnTransactionNo.Enabled = true;
+            }
+            else
+            {
+                pnlValueInput.Enabled = true;
+                txtTransactionAmount.Focus();
+            }
+
         }
 
         private void btnTransactionAmountOK_Click(object sender, EventArgs e)
@@ -80,7 +89,7 @@ namespace ATM.Forms
             try
             {
                 transactionAmount = Convert.ToDecimal(txtTransactionAmount.Text);
-                if(transactionAmount < 0)
+                if (transactionAmount < 0)
                 {
                     MessageBox.Show("Please enter a non-negative amount.", "Error");
                     txtTransactionAmount.Text = "";
@@ -197,6 +206,10 @@ namespace ATM.Forms
                     savingsBalance += transactionAmount;
                     transactionHappened = true;
                 }
+            }
+            if (selectedTransaction == 3 || selectedTransaction == 7)
+            {
+                transactionHappened = true;
             }
             if (transactionHappened)
             {

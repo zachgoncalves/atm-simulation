@@ -14,15 +14,8 @@ namespace ATM.Classes
         // updatedFile class that handles writes data from currentFile and update data from customer to a new file.
         // Author: Professor Frank Friedman, with modifications by Zachary Goncalves
         private string updatedFilePath;
-        private StreamReader currentFileSR;   // Reference variable of type SR
+        private StreamWriter outputFile;   // Reference variable of type SW
         private int recordsWrittenCount;
-
-
-        /* TO DO:
-         * Write Info from customer class to updatedFile 
-         * Write remaining currentFile contents to updatedFile
-         */
-
 
         // Constructor with file path input
         // Create instance of StreamReader class (type) and store reference
@@ -30,53 +23,22 @@ namespace ATM.Classes
         {
             recordsWrittenCount = 0;
             updatedFilePath = filePath;
-            try
-            {
-                currentFileSR = new System.IO.StreamReader(updatedFilePath);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Cannot open file" + updatedFilePath + "Terminate Program.","Output File Connection Error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            } // end Try
         } // end currentFileClass 
 
         public void putNextRecord(string record)
         {
             try
             {
-                string[] lines = { "no", "yes", "maybe"};
-                using (StreamWriter outputFile = new StreamWriter(Path.Combine(updatedFilePath, "updatedFile.txt")))
+                using (outputFile = new StreamWriter(updatedFilePath))
                 {
-                    foreach (string line in lines)
-                        outputFile.WriteLine(line);
+                    outputFile.WriteLine(record);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("Cannot write file" + updatedFilePath + "Terminate Program." + ex, "Output File Connection Error.", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        // Read a record from the current file
-        public string getNextRecord(ref Boolean endOfFileFlag)
-        {
-            string nextRecord;
-
-            endOfFileFlag = false;
-            nextRecord = currentFileSR.ReadLine();
-
-            if (nextRecord == null)
-            {
-                endOfFileFlag = true;
-            }
-            else
-            {
-                recordsWrittenCount += 1;
-            } // end if
-
-            return (nextRecord);
-        } // end getNextRecord
-
 
         // Get value of number of records read
         public int getRecordsWrittenCount()
@@ -88,7 +50,7 @@ namespace ATM.Classes
         // Close the input file
         public void closeFile()
         {
-            currentFileSR.Close();
+            outputFile.Close();
         } // end Sub
 
 
@@ -96,7 +58,7 @@ namespace ATM.Classes
         public void rewindFile()
         {
             recordsWrittenCount = 0;
-            currentFileSR.BaseStream.Seek(0, System.IO.SeekOrigin.Begin);
+            outputFile.BaseStream.Seek(0, System.IO.SeekOrigin.Begin);
         } // end rewindFile
     } // end currentFileClass
 }

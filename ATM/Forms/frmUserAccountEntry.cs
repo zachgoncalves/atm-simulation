@@ -48,6 +48,7 @@ namespace ATM.Forms
                         accNumber = 0;
                         record = "";
                         txtAccNum.Focus();
+                        GlobalData.ATMBank.rewindFiles();
                     }
                 }
             }

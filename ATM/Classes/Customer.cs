@@ -11,10 +11,10 @@ namespace ATM.Classes
     {
         string customer;
         string customerAccNumber;
-        string recordName;
-        int recordPin;
-        decimal recordCheckingBalance;
-        decimal recordSavingBalance;
+        string customerName;
+        int customerPin;
+        decimal customerCheckingBalance;
+        decimal customerSavingBalance;
 
         public Boolean customerMatch(string accNumber, string record)
         {
@@ -25,10 +25,10 @@ namespace ATM.Classes
             if (recordBreakdown[0].Trim().Equals(accNumber))
             {
                 customerAccNumber = accNumber;
-                recordName = recordBreakdown[1].Trim();
-                recordPin = Convert.ToInt32(recordBreakdown[2]);
-                recordSavingBalance = Convert.ToDecimal(recordBreakdown[3]);
-                recordCheckingBalance = Convert.ToDecimal(recordBreakdown[4]);
+                customerName = recordBreakdown[1].Trim();
+                customerPin = Convert.ToInt32(recordBreakdown[2]);
+                customerSavingBalance = Convert.ToDecimal(recordBreakdown[3]);
+                customerCheckingBalance = Convert.ToDecimal(recordBreakdown[4]);
                 MessageBox.Show(recordBreakdown[0] + " :Acc Num: " + accNumber);
                 return true;
             }
@@ -39,24 +39,29 @@ namespace ATM.Classes
         }
         public string getCustomerName()
         {
-            return recordName;
+            return customerName;
         }
         public int getCustomerPin()
         {
-            return recordPin;
+            return customerPin;
         }
         public decimal getRecordSavingsBalance()
         {
-            return recordSavingBalance;
+            return customerSavingBalance;
         }
         public decimal getRecordCheckingBalance()
         {
-            return recordCheckingBalance;
+            return customerCheckingBalance;
         }
         public void updateSavingsCheckings(decimal savingsBalance, decimal checkingBalance)
         {
-            recordCheckingBalance = checkingBalance;
-            recordSavingBalance = savingsBalance;
+            customerCheckingBalance = checkingBalance;
+            customerSavingBalance = savingsBalance;
+        }
+        public string generateRecord()
+        {
+            customer = customerAccNumber + " * " + customerName + " * " + customerPin + " * " + customerSavingBalance.ToString("C") + " * " + customerCheckingBalance.ToString("C");
+            return customer;
         }
     }
 }

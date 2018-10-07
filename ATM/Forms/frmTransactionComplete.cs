@@ -35,6 +35,8 @@ namespace ATM.Forms
         {
             Form frmTransactionEntry = new frmTransactionEntry();
             frmTransactionEntry.Show();
+            GlobalData.ATMBank.writeOut(GlobalData.customer.generateRecord());
+            GlobalData.ATMBank.CopyRemainingRecords();
             Close();
         }
     }
