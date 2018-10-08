@@ -14,8 +14,6 @@ namespace ATM.Classes
         // Application classes
         public static ATMBank ATMBank = new ATMBank();
         public static Customer customer = new Customer();
-        public static currentFile currentFile = new currentFile(currentFilePath);
-        public static updatedFile updatedFile = new updatedFile(updatedFilePath);
 
         // Creating instances of all the forms ...
         public static Form TransactionCompleteForm = new Forms.frmTransactionComplete();

@@ -16,7 +16,7 @@ namespace ATM.Classes
 
         private currentFile currentFile = new currentFile(currentFilePath);
         private updatedFile updatedFile = new updatedFile(updatedFilePath);
-
+        
         // Exact length of legal accounts for Bailed Out Bank
         private int hiddenAccountLength = 5;
 
@@ -78,11 +78,15 @@ namespace ATM.Classes
                 nextRecord = currentFile.getNextRecord(ref isEndOfFile);
             } // end While
 
-            MessageBox.Show("End of program execution." + "\n"
-                + "The number of records read is: " + currentFile.getRecordsReadCount().ToString() + "\n"
-                + "The number of records written is: " + updatedFile.getRecordsWrittenCount().ToString());
         } // end CopyRemaingRecords
 
+        public void generateUpdatedFile()
+        {
+            updatedFile.generateFile();
+            MessageBox.Show("End of program execution." + "\n"
+            + "The number of records read is: " + currentFile.getRecordsReadCount().ToString() + "\n"
+            + "The number of records written is: " + updatedFile.getRecordsWrittenCount().ToString());
+        }
 
         public void rewindFiles()
         {

@@ -4,6 +4,7 @@
  * Written by: Zachary Goncalves with code provided by Professor Frank Friedman
  */
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -16,6 +17,7 @@ namespace ATM.Classes
         private string updatedFilePath;
         private StreamWriter outputFile;   // Reference variable of type SW
         private int recordsWrittenCount;
+        private List<string> recordsList = new List<string>();
 
         // Constructor with file path input
         // Create instance of StreamReader class (type) and store reference
@@ -27,11 +29,24 @@ namespace ATM.Classes
 
         public void putNextRecord(string record)
         {
+            recordsList.Add(record);
+        }
+
+        public void generateFile()
+        {
             try
             {
-                using (outputFile = new StreamWriter(updatedFilePath))
+                if (File.Exists(updatedFilePath))
                 {
-                    outputFile.WriteLine(record);
+                    File.Delete(updatedFilePath);
+                }
+                using (outputFile = new StreamWriter(updatedFilePath, true))
+                {
+                    foreach (string record in recordsList)
+                    {
+                        outputFile.WriteLine(record);
+                        recordsWrittenCount++;
+                    }
                 }
             }
             catch (Exception ex)

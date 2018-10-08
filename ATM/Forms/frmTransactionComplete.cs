@@ -28,6 +28,9 @@ namespace ATM.Forms
         private void btnNoNewTransaction_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thanks for being a MazeBank Customer!");
+            GlobalData.ATMBank.writeOut(GlobalData.customer.generateRecord());
+            GlobalData.ATMBank.CopyRemainingRecords();
+            GlobalData.ATMBank.generateUpdatedFile();
             Application.Exit();
         }
 
@@ -35,8 +38,6 @@ namespace ATM.Forms
         {
             Form frmTransactionEntry = new frmTransactionEntry();
             frmTransactionEntry.Show();
-            GlobalData.ATMBank.writeOut(GlobalData.customer.generateRecord());
-            GlobalData.ATMBank.CopyRemainingRecords();
             Close();
         }
     }
