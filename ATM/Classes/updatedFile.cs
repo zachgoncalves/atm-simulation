@@ -1,7 +1,8 @@
 ﻿/* Temple University
  * Component Based Software Design (CIS 3309) 
  * Project 2: ATM
- * Written by: Zachary Goncalves with code provided by Professor Frank Friedman
+ * Class: updatedFile
+ * Written by: Zachary Goncalves with some code provided by Professor Frank Friedman
  */
 using System;
 using System.Collections.Generic;

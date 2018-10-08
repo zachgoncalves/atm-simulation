@@ -1,7 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿/* Temple University
+ * Component Based Software Design (CIS 3309) 
+ * Project 2: ATM
+ * Class: ATMBank
+ * Written by: Zachary Goncalves with some code provided by Professor Frank Friedman
+ */
+using System;
 using System.Windows.Forms;
 
 namespace ATM.Classes
