@@ -12,11 +12,12 @@ namespace ATM.Forms
 {
     public partial class frmUserAccountEntry : Form
     {
+        // This form handels the initial entry of the user's account. 
         public frmUserAccountEntry()
         {
             InitializeComponent();
         }
-
+        // Validates user input and opens next form if they account matches
         private void btnAccStart_Click(object sender, EventArgs e)
         {
             try

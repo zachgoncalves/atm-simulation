@@ -12,12 +12,14 @@ namespace ATM.Forms
 {
     public partial class frmUserNameAndPin : Form
     {
+        // This form verifies that the customer is the customer and tracks login attempts. 
         int loginAttempts = 1;
         public frmUserNameAndPin()
         {
             InitializeComponent();
         }
-
+        // Validates inputs are valid and checks if the user input matches what is on record.
+        // Closes form if number of login attempts exceeds 3. 
         private void btnVerifyAcc_Click(object sender, EventArgs e)
         {
             try

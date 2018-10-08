@@ -13,16 +13,17 @@ namespace ATM.Forms
 {
     public partial class frmTransactionEntry : Form
     {
+        // This form handles selecting and processing a transaction.
         int selectedTransaction = 0;
         decimal transactionAmount = 0;
         decimal checkingBalance = GlobalData.customer.getRecordCheckingBalance();
         decimal savingsBalance = GlobalData.customer.getRecordSavingsBalance();
-
+        // Constructor
         public frmTransactionEntry()
         {
             InitializeComponent();
         }
-
+        // Disables all unselected controls 
         public void lockUnusedControls(object control)
         {
             foreach (Control c in pnlTransactionList.Controls)
@@ -35,7 +36,8 @@ namespace ATM.Forms
                 }
             }
         }
-
+        // Sets selected transaction value to value representing button. Updates btn background color
+        // and unlocks inputs for value of transaction.
         private void transaction_Click(object sender, EventArgs e)
         {
             lockUnusedControls(sender);
@@ -99,7 +101,7 @@ namespace ATM.Forms
             }
 
         }
-
+        // Validates amount (ensures non-negative) and shows transaction review information. 
         private void btnTransactionAmountOK_Click(object sender, EventArgs e)
         {
             try
@@ -127,7 +129,9 @@ namespace ATM.Forms
                 txtTransactionAmount.Focus();
             }
         }
-
+        // Calculates changes to accounts based on transaction information. Validates some transaction rules.
+        // Updates customer object with new information and opens frmTransactionComplete.
+        // Closes transaction entry form.
         private void btnTransactionGo_Click(object sender, EventArgs e)
         {
             bool transactionHappened = false; 
@@ -236,7 +240,7 @@ namespace ATM.Forms
             }
 
         }
-
+        // Resets form and values.
         private void btnTransactionNo_Click(object sender, EventArgs e)
         {
             foreach (Control c in pnlTransactionList.Controls)
