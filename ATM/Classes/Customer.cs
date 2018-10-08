@@ -29,7 +29,6 @@ namespace ATM.Classes
                 customerPin = Convert.ToInt32(recordBreakdown[2]);
                 customerSavingBalance = Convert.ToDecimal(recordBreakdown[3]);
                 customerCheckingBalance = Convert.ToDecimal(recordBreakdown[4]);
-                MessageBox.Show(recordBreakdown[0] + " :Acc Num: " + accNumber);
                 return true;
             }
             else
