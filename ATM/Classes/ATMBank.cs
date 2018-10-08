@@ -83,6 +83,7 @@ namespace ATM.Classes
 
         } // end CopyRemaingRecords
 
+        // Generates the updatedFile 
         public void generateUpdatedFile()
         {
             updatedFile.generateFile();
@@ -90,14 +91,14 @@ namespace ATM.Classes
             + "The number of records read is: " + currentFile.getRecordsReadCount().ToString() + "\n"
             + "The number of records written is: " + updatedFile.getRecordsWrittenCount().ToString());
         }
-
+        // Returns stream readers to start of file
         public void rewindFiles()
         {
             currentFile.rewindFile();
             updatedFile.rewindFile();
         }  // end rewindFiles
 
-
+        // CLose StreamReader/StreamWriters 
         public void closeFiles()
         {
             currentFile.closeFile();

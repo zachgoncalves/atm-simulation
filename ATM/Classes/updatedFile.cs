@@ -27,12 +27,12 @@ namespace ATM.Classes
             recordsWrittenCount = 0;
             updatedFilePath = filePath;
         } // end currentFileClass 
-
+        // Adds record to list of records 
         public void putNextRecord(string record)
         {
             recordsList.Add(record);
         }
-
+        // Writes each record in list of reccords to updatedfile.
         public void generateFile()
         {
             try

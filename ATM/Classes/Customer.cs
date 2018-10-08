@@ -13,6 +13,7 @@ using System.Windows.Forms;
 
 namespace ATM.Classes
 {
+    // Represents customer using ATM
     public class Customer
     {
         string customer;
@@ -21,7 +22,8 @@ namespace ATM.Classes
         int customerPin;
         decimal customerCheckingBalance;
         decimal customerSavingBalance;
-
+        // Takes and sanitizes record, then compares user input with record, 
+        // returns its its a match, and updates class attributes.
         public Boolean customerMatch(string accNumber, string record)
         {
             record = record.Replace(",", "");
@@ -42,27 +44,33 @@ namespace ATM.Classes
                 return false;
             }   
         }
+        // Gets the customer name
         public string getCustomerName()
         {
             return customerName;
         }
+        // Gets the customer PIN
         public int getCustomerPin()
         {
             return customerPin;
         }
+        // Gets Savings Account Balance
         public decimal getRecordSavingsBalance()
         {
             return customerSavingBalance;
         }
+        // Gets Checking Account Balance
         public decimal getRecordCheckingBalance()
         {
             return customerCheckingBalance;
         }
+        // Updates account balances 
         public void updateSavingsCheckings(decimal savingsBalance, decimal checkingBalance)
         {
             customerCheckingBalance = checkingBalance;
             customerSavingBalance = savingsBalance;
         }
+        // Generates updated customer record for export
         public string generateRecord()
         {
             customer = customerAccNumber + " * " + customerName + " * " + customerPin + " * " + customerSavingBalance.ToString("C") + " * " + customerCheckingBalance.ToString("C");

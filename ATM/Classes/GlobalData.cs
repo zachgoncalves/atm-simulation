@@ -14,6 +14,7 @@ namespace ATM.Classes
 {
     public class GlobalData
     {
+        // The global data class instantiates globally accessible objects. 
         private static string currentFilePath = "CurrentATMBankFile.txt";
         private static string updatedFilePath = "UpdatedATMBankFile.txt";
 
