@@ -51,10 +51,10 @@ namespace ATM.Forms
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 txtAccNum.Text = "";
-                MessageBox.Show("Please enter a valid account number of 5 digits." + ex, "Error");
+                MessageBox.Show("Please enter a valid account number of 5 digits.", "Error");
                 txtAccNum.Focus();
             }
         }
