@@ -13,6 +13,7 @@ namespace ATM.Forms
 {
     public partial class frmUserNameAndPin : Form
     {
+        int loginAttempts = 1;
         public frmUserNameAndPin()
         {
             InitializeComponent();
@@ -20,37 +21,44 @@ namespace ATM.Forms
 
         private void btnVerifyAcc_Click(object sender, EventArgs e)
         {
-            int loginAttempts = 0;
-            // TODO: 
-            //  - Count number of failed entries (and kick user out / reload to form 1)
-            // txtVerifyName, txtVerifyPin
             try
             {
                 string customerName = txtVerifyName.Text;
                 decimal customerPin = Convert.ToDecimal(txtVerifyPin.Text);
-                if (customerName.Equals(GlobalData.customer.getCustomerName()) && customerPin == Convert.ToInt32(GlobalData.customer.getCustomerPin()))
+                if(loginAttempts <= 3)
                 {
-                    Form frmTransactionEntry = new frmTransactionEntry();
-                    frmTransactionEntry.Show();
-                    Close();
-                }
-                else
-                {
-                    if(!customerName.Equals(GlobalData.customer.getCustomerName()))
+                    if (customerName.Equals(GlobalData.customer.getCustomerName()) && customerPin == Convert.ToInt32(GlobalData.customer.getCustomerPin()))
                     {
-                        MessageBox.Show("Please enter the correct name.", "Error");
-                        txtVerifyName.Text = "";
-                        customerName = "";
-                        txtVerifyName.Focus();
+                        Form frmTransactionEntry = new frmTransactionEntry();
+                        frmTransactionEntry.Show();
+                        Close();
                     }
                     else
                     {
-                        MessageBox.Show("Please enter the correct PIN number.", "Error");
-                        txtVerifyPin.Text = "";
-                        customerPin = 0;
-                        txtVerifyPin.Focus();
+                        if (!customerName.Equals(GlobalData.customer.getCustomerName()))
+                        {
+                            MessageBox.Show("Please enter the correct name.", "Error");
+                            txtVerifyName.Text = "";
+                            customerName = "";
+                            txtVerifyName.Focus();
+                            loginAttempts++;
+                        }
+                        else if (!customerPin.Equals(GlobalData.customer.getCustomerPin()))
+                        {
+                            MessageBox.Show("Please enter the correct PIN number.", "Error");
+                            txtVerifyPin.Text = "";
+                            customerPin = 0;
+                            txtVerifyPin.Focus();
+                            loginAttempts++;
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("You have reached the maximum login attempts.", "Account Locked");
+                    Application.Exit();
+                }
+
             }
             catch
             {
