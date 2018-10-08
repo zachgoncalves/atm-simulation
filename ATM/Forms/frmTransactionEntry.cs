@@ -42,37 +42,53 @@ namespace ATM.Forms
             if (sender == btnSavingsDeposit)
             {
                 selectedTransaction = 1;
+                btnSavingsDeposit.BackColor = Color.LightBlue;
             }
             if (sender == btnSavingsWithdraw)
             {
                 selectedTransaction = 2;
+                btnSavingsWithdraw.BackColor = Color.LightBlue;
             }
             if (sender == btnSavingsBalance)
             {
                 selectedTransaction = 3;
+                btnSavingsBalance.BackColor = Color.LightBlue;
             }
             if (sender == btnSavingsToChecking)
             {
                 selectedTransaction = 4;
+                btnSavingsToChecking.BackColor = Color.LightBlue;
             }
             if (sender == btnCheckingDeposit)
             {
                 selectedTransaction = 5;
+                btnCheckingDeposit.BackColor = Color.LightBlue;
             }
             if (sender == btnCheckingWithdraw)
             {
                 selectedTransaction = 6;
+                btnCheckingWithdraw.BackColor = Color.LightBlue;
             }
             if (sender == btnCheckingBalance)
             {
                 selectedTransaction = 7;
+                btnCheckingBalance.BackColor = Color.LightBlue;
             }
             if (sender == btnCheckingToSavings)
             {
                 selectedTransaction = 8;
+                btnCheckingToSavings.BackColor = Color.LightBlue;
             }
             if (selectedTransaction == 3 || selectedTransaction == 7)
             {
+                if(selectedTransaction == 3)
+                {
+                    btnSavingsBalance.BackColor = Color.LightBlue;
+                }
+                else
+                {
+                    btnCheckingBalance.BackColor = Color.LightBlue;
+                }
                 btnTransactionGo.Enabled = true;
                 btnTransactionNo.Enabled = true;
             }
