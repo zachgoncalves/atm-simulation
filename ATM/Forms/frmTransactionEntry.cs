@@ -242,6 +242,7 @@ namespace ATM.Forms
             foreach (Control c in pnlTransactionList.Controls)
             {
                 c.Enabled = true;
+                c.BackColor = Button.DefaultBackColor;
             }
             transactionAmount = 0;
             selectedTransaction = 0;
