@@ -12,7 +12,8 @@ namespace ATM.Forms
 {
     public partial class frmUserAccountEntry : Form
     {
-        // This form handels the initial entry of the user's account. 
+        // This form handels the initial entry of the user's account.
+        int loginAttempts = 1;
         public frmUserAccountEntry()
         {
             InitializeComponent();
@@ -22,34 +23,43 @@ namespace ATM.Forms
         {
             try
             {
-                int accNumber = Convert.ToInt32(txtAccNum.Text);
-                if (accNumber.ToString().Length != 5)
+                if(GlobalData.ATMBank.maxAttemptsYet(loginAttempts))
                 {
-                    accNumber = 0;
-                    txtAccNum.Text = "";
-                    MessageBox.Show("Please enter an account number of 5 digits.", "Error");
-                    txtAccNum.Focus();
-                }
-                else
-                {
-                    string strAccNumber = accNumber.ToString();
-                    bool foundRecord = false;
-                    string record = GlobalData.ATMBank.findCustomerRecord(strAccNumber, ref foundRecord);
-
-                    if (foundRecord)
+                    int accNumber = Convert.ToInt32(txtAccNum.Text);
+                    if (GlobalData.ATMBank.isNotAccountLength(accNumber.ToString().Length))
                     {
-                        Form UserNamePinForm = new frmUserNameAndPin();
-                        UserNamePinForm.Show();
+                        accNumber = 0;
+                        txtAccNum.Text = "";
+                        MessageBox.Show("Please enter an account number of 5 digits." + "\n" + "Login Attempts: " + loginAttempts, "Error");
+                        txtAccNum.Focus();
+                        loginAttempts++;
                     }
                     else
                     {
-                        MessageBox.Show("Please enter an account number that exists in our system.", "Error");
-                        txtAccNum.Text = "";
-                        accNumber = 0;
-                        record = "";
-                        txtAccNum.Focus();
-                        GlobalData.ATMBank.rewindFiles();
+                        string strAccNumber = accNumber.ToString();
+                        bool foundRecord = false;
+                        string record = GlobalData.ATMBank.findCustomerRecord(strAccNumber, ref foundRecord);
+                        loginAttempts++;
+
+                        if (foundRecord)
+                        {
+                            Form UserNamePinForm = new frmUserNameAndPin();
+                            UserNamePinForm.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please enter an account number that exists in our system.", "Error");
+                            txtAccNum.Text = "";
+                            accNumber = 0;
+                            record = "";
+                            txtAccNum.Focus();
+                            GlobalData.ATMBank.rewindFiles();
+                        }
                     }
+                } else
+                {
+                    MessageBox.Show("Login attempts exceeded.", "Security Alert");
+                    Application.Exit();
                 }
             }
             catch

@@ -26,7 +26,7 @@ namespace ATM.Forms
             {
                 string customerName = txtVerifyName.Text;
                 decimal customerPin = Convert.ToDecimal(txtVerifyPin.Text);
-                if(loginAttempts <= 3)
+                if(GlobalData.ATMBank.maxAttemptsYet(loginAttempts))
                 {
                     if (customerName.Equals(GlobalData.customer.getCustomerName()) && customerPin == Convert.ToInt32(GlobalData.customer.getCustomerPin()))
                     {

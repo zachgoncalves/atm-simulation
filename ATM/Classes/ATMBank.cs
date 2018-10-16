@@ -34,10 +34,10 @@ namespace ATM.Classes
         {
 
         }
-
+        // Returns true/false if the withdrawal amount is at limit
         public Boolean meetsLimit(decimal amount)
         {
-            if(amount > 300)
+            if(amount > hiddenWDAmount)
             {
                 return false;      
             }
@@ -46,6 +46,31 @@ namespace ATM.Classes
                 return true;
             }
         }
+        // Checks if login attempts match system set max attempts.
+        public Boolean maxAttemptsYet(int attemptCount)
+        {
+            if(attemptCount >= hiddenTryCountMax)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        // Checks if user inputted account number length matches the system default
+        public Boolean isNotAccountLength(int length)
+        {
+            if(length < hiddenAccountLength)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
         // Find customer record given the entered account
         public string findCustomerRecord(string account, ref Boolean found)
