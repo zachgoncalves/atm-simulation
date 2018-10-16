@@ -95,6 +95,7 @@
             this.btnSavingsDeposit.Name = "btnSavingsDeposit";
             this.btnSavingsDeposit.Size = new System.Drawing.Size(356, 46);
             this.btnSavingsDeposit.TabIndex = 6;
+            this.btnSavingsDeposit.TabStop = false;
             this.btnSavingsDeposit.Text = "Deposit";
             this.btnSavingsDeposit.UseVisualStyleBackColor = true;
             this.btnSavingsDeposit.Click += new System.EventHandler(this.transaction_Click);
@@ -106,6 +107,7 @@
             this.btnSavingsWithdraw.Name = "btnSavingsWithdraw";
             this.btnSavingsWithdraw.Size = new System.Drawing.Size(356, 46);
             this.btnSavingsWithdraw.TabIndex = 7;
+            this.btnSavingsWithdraw.TabStop = false;
             this.btnSavingsWithdraw.Text = "Withdraw";
             this.btnSavingsWithdraw.UseVisualStyleBackColor = true;
             this.btnSavingsWithdraw.Click += new System.EventHandler(this.transaction_Click);
@@ -117,6 +119,7 @@
             this.btnSavingsBalance.Name = "btnSavingsBalance";
             this.btnSavingsBalance.Size = new System.Drawing.Size(356, 46);
             this.btnSavingsBalance.TabIndex = 8;
+            this.btnSavingsBalance.TabStop = false;
             this.btnSavingsBalance.Text = "View Balance";
             this.btnSavingsBalance.UseVisualStyleBackColor = true;
             this.btnSavingsBalance.Click += new System.EventHandler(this.transaction_Click);
@@ -128,6 +131,7 @@
             this.btnSavingsToChecking.Name = "btnSavingsToChecking";
             this.btnSavingsToChecking.Size = new System.Drawing.Size(356, 46);
             this.btnSavingsToChecking.TabIndex = 9;
+            this.btnSavingsToChecking.TabStop = false;
             this.btnSavingsToChecking.Text = "Transfer to Checking";
             this.btnSavingsToChecking.UseVisualStyleBackColor = true;
             this.btnSavingsToChecking.Click += new System.EventHandler(this.transaction_Click);
@@ -139,6 +143,7 @@
             this.btnCheckingToSavings.Name = "btnCheckingToSavings";
             this.btnCheckingToSavings.Size = new System.Drawing.Size(356, 46);
             this.btnCheckingToSavings.TabIndex = 14;
+            this.btnCheckingToSavings.TabStop = false;
             this.btnCheckingToSavings.Text = "Transfer to Savings";
             this.btnCheckingToSavings.UseVisualStyleBackColor = true;
             this.btnCheckingToSavings.Click += new System.EventHandler(this.transaction_Click);
@@ -150,6 +155,7 @@
             this.btnCheckingBalance.Name = "btnCheckingBalance";
             this.btnCheckingBalance.Size = new System.Drawing.Size(356, 46);
             this.btnCheckingBalance.TabIndex = 13;
+            this.btnCheckingBalance.TabStop = false;
             this.btnCheckingBalance.Text = "View Balance";
             this.btnCheckingBalance.UseVisualStyleBackColor = true;
             this.btnCheckingBalance.Click += new System.EventHandler(this.transaction_Click);
@@ -161,6 +167,7 @@
             this.btnCheckingWithdraw.Name = "btnCheckingWithdraw";
             this.btnCheckingWithdraw.Size = new System.Drawing.Size(356, 46);
             this.btnCheckingWithdraw.TabIndex = 12;
+            this.btnCheckingWithdraw.TabStop = false;
             this.btnCheckingWithdraw.Text = "Withdraw";
             this.btnCheckingWithdraw.UseVisualStyleBackColor = true;
             this.btnCheckingWithdraw.Click += new System.EventHandler(this.transaction_Click);
@@ -172,6 +179,7 @@
             this.btnCheckingDeposit.Name = "btnCheckingDeposit";
             this.btnCheckingDeposit.Size = new System.Drawing.Size(356, 46);
             this.btnCheckingDeposit.TabIndex = 11;
+            this.btnCheckingDeposit.TabStop = false;
             this.btnCheckingDeposit.Text = "Deposit";
             this.btnCheckingDeposit.UseVisualStyleBackColor = true;
             this.btnCheckingDeposit.Click += new System.EventHandler(this.transaction_Click);

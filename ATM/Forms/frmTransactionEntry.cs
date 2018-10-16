@@ -250,6 +250,7 @@ namespace ATM.Forms
             }
             transactionAmount = 0;
             selectedTransaction = 0;
+            txtTransactionAmount.Text = "";
             pnlVerifyAmount.Visible = false;
             pnlValueInput.Enabled = false;
             btnTransactionGo.Enabled = false;
