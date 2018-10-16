@@ -35,6 +35,18 @@ namespace ATM.Classes
 
         }
 
+        public Boolean meetsLimit(decimal amount)
+        {
+            if(amount > 300)
+            {
+                return false;      
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         // Find customer record given the entered account
         public string findCustomerRecord(string account, ref Boolean found)
         {
@@ -59,7 +71,6 @@ namespace ATM.Classes
 
             return (nextRecord);
         } //end find Customer Record
-
 
         // Writes a single record (such as a modified record) to the updated file
         public void writeOut(string record)

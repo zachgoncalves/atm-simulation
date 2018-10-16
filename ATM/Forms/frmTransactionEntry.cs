@@ -142,16 +142,9 @@ namespace ATM.Forms
             }
             if (selectedTransaction == 2)
             {
-                if(transactionAmount > 300)
+                if(GlobalData.ATMBank.meetsLimit(transactionAmount))
                 {
-                    MessageBox.Show("Please enter a withdrawal amount less than 300.", "Error");
-                    transactionAmount = 0;
-                    txtTransactionAmount.Text = "";
-                    txtTransactionAmount.Focus();
-                }
-                else
-                {
-                    if(transactionAmount > savingsBalance)
+                    if (transactionAmount > savingsBalance)
                     {
                         MessageBox.Show("You are withdrawing more money than you have in your account. Please widthdraw less.", "Overdraft Warning");
                         transactionAmount = 0;
@@ -163,6 +156,13 @@ namespace ATM.Forms
                         savingsBalance -= transactionAmount;
                         transactionHappened = true;
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a withdrawal amount less than 300.", "Error");
+                    transactionAmount = 0;
+                    txtTransactionAmount.Text = "";
+                    txtTransactionAmount.Focus();
                 }
             }
             if (selectedTransaction == 4)
